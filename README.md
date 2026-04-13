@@ -27,4 +27,4 @@ Secure file sharing system built with ASP.NET Core and Clean Architecture.
 
 ## Security
 
-Sensitive data is excluded via .gitignore.
+
