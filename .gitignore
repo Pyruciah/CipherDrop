@@ -1,0 +1,25 @@
+# Build
+bin/
+obj/
+
+# User files
+*.user
+*.suo
+
+# VS Code
+.vscode/
+
+# Logs
+*.log
+
+# Environment
+appsettings.Development.json
+
+# Storage (uploaded files)
+CipherDrop.API/Storage/
+
+# OS
+.DS_Store
+Thumbs.db
+
+.vs/

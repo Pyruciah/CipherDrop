@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.37027.9
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CipherDrop.API", "CipherDrop.API\CipherDrop.API.csproj", "{165DA312-DD10-4FB6-AC3C-0773B8C5685B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CipherDrop.Domain", "CipherDrop.Domain\CipherDrop.Domain.csproj", "{4CD3B068-DA75-4774-B34E-E020C77FDBFA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CipherDrop.Application", "CipherDrop.Application\CipherDrop.Application.csproj", "{BB1A04EF-84E5-4C2E-9E80-A5D5479C3EE6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CipherDrop.Infrastructure", "CipherDrop.Infrastructure\CipherDrop.Infrastructure.csproj", "{33BDFD87-F530-4DFE-A345-BCA5B79E8BA9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CipherDrop.Persistence", "CipherDrop.Persistence\CipherDrop.Persistence.csproj", "{122C857C-6B3C-40A7-ACF9-C7D24612A61D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CipherDrop.Client", "CipherDrop.Client\CipherDrop.Client.csproj", "{3700BE67-D64C-457E-AE06-F3E0F426E01B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{165DA312-DD10-4FB6-AC3C-0773B8C5685B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{165DA312-DD10-4FB6-AC3C-0773B8C5685B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{165DA312-DD10-4FB6-AC3C-0773B8C5685B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{165DA312-DD10-4FB6-AC3C-0773B8C5685B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4CD3B068-DA75-4774-B34E-E020C77FDBFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4CD3B068-DA75-4774-B34E-E020C77FDBFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4CD3B068-DA75-4774-B34E-E020C77FDBFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4CD3B068-DA75-4774-B34E-E020C77FDBFA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB1A04EF-84E5-4C2E-9E80-A5D5479C3EE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB1A04EF-84E5-4C2E-9E80-A5D5479C3EE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB1A04EF-84E5-4C2E-9E80-A5D5479C3EE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB1A04EF-84E5-4C2E-9E80-A5D5479C3EE6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33BDFD87-F530-4DFE-A345-BCA5B79E8BA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33BDFD87-F530-4DFE-A345-BCA5B79E8BA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33BDFD87-F530-4DFE-A345-BCA5B79E8BA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33BDFD87-F530-4DFE-A345-BCA5B79E8BA9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{122C857C-6B3C-40A7-ACF9-C7D24612A61D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{122C857C-6B3C-40A7-ACF9-C7D24612A61D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{122C857C-6B3C-40A7-ACF9-C7D24612A61D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{122C857C-6B3C-40A7-ACF9-C7D24612A61D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3700BE67-D64C-457E-AE06-F3E0F426E01B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3700BE67-D64C-457E-AE06-F3E0F426E01B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3700BE67-D64C-457E-AE06-F3E0F426E01B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3700BE67-D64C-457E-AE06-F3E0F426E01B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0BDAAA9A-4CEC-4178-BFC5-25261FCED9F4}
+	EndGlobalSection
+EndGlobal

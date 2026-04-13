@@ -1,0 +1,122 @@
+﻿<link rel="stylesheet" href="css/styles.css">
+
+<div class="container">
+    <button class="back-btn" onclick="goBack()">← Back</button>
+    <button class="logout-btn" onclick="logout()">Logout</button>
+    <h2>Upload File</h2>
+
+    <input type="file" id="fileInput">
+    <button onclick="upload()">Upload</button>
+    <!-- Spinner -->
+    <div id="spinner" class="spinner"></div>
+    <p id="result"></p>
+
+    <!-- File name display -->
+    <p id="fileName"></p>
+
+
+    <!-- Download button will appear here -->
+    <div id="downloadSection"></div>
+</div>
+
+<script src="js/app.js"></script>
+
+<script>
+    function goBack() {
+        window.history.back();
+    }
+
+    function logout() {
+        localStorage.removeItem("token");
+        alert("Logged out");
+        window.location.href = "login.html";
+    }
+
+
+    async function upload() {
+        const fileInput = document.getElementById("fileInput");
+        const file = fileInput.files[0];
+
+        if (!file) {
+            alert("Please select a file first.");
+            return;
+        }
+
+        const formData = new FormData();
+        formData.append("file", file);
+
+        try {
+            const res = await fetch(API_BASE + "/files/upload", {
+                method: "POST",
+                headers: authHeader(),
+                body: formData
+            });
+
+            if (!res.ok) {
+                document.getElementById("result").innerText =
+                    "Upload failed: " + res.status;
+                return;
+            }
+
+            const data = await res.json();
+
+            // Show success message
+            document.getElementById("result").innerText =
+                "File uploaded successfully.";
+
+            // Extract token from link
+            const token = data.downloadLink.split("/").pop();
+
+            // Show download button instead of raw link
+            document.getElementById("downloadSection").innerHTML = `
+            <button onclick="downloadFile('${token}')">
+                Download File
+            </button>
+        `;
+
+        } catch (error) {
+            console.error(error);
+            document.getElementById("result").innerText =
+                "Error uploading file.";
+        }
+    }
+
+
+    // Secure download using JWT
+    async function downloadFile(token) {
+        const jwt = localStorage.getItem("token");
+
+        if (!jwt) {
+            alert("You are not logged in.");
+            return;
+        }
+
+        try {
+            const response = await fetch(`${API_BASE}/files/download/${token}`, {
+                method: "GET",
+                headers: {
+                    "Authorization": `Bearer ${jwt}`
+                }
+            });
+
+            if (!response.ok) {
+                alert("Download failed: " + response.status);
+                return;
+            }
+
+            const blob = await response.blob();
+            const url = window.URL.createObjectURL(blob);
+
+            const a = document.createElement("a");
+            a.href = url;
+            a.download = "file"; // optional: improve later with real filename
+            document.body.appendChild(a);
+            a.click();
+            a.remove();
+
+        } catch (error) {
+            console.error(error);
+            alert("Error downloading file.");
+        }
+    }
+</script>
